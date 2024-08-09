@@ -19,16 +19,15 @@ public class User {
     }
 
 
-    public List<Book> return_book() {
-        return this.borrowed_books;
+    public void return_book(Book book) {
+        this.borrowed_books.remove(book);
     }
 
     public void display_info(){
         System.out.println("User ID: " + this.user_id);
         System.out.println("Name: " + this.name);
         System.out.println("Borrowed books: ");
-        for (Book book : return_book()) {
-            System.out.println("--------------------");
+        for (Book book : this.borrowed_books) {
             book.display_info();
         }
     }
