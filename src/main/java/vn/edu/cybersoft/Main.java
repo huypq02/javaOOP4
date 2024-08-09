@@ -111,15 +111,19 @@ public class Main {
 
         // advanced exercise 4 quan ly thu vien sach vơi nguoi dung
         System.out.println("Advanced Exercise 4: ");
-        System.out.println("Reference Book: ");
+
         vn.edu.cybersoft.advanced_exercise4.ReferenceBook referenceBook1 = new ReferenceBook("Java", "Cybersoft", "123456", "Basic Programming");
-        System.out.println("Text Book: ");
+
         vn.edu.cybersoft.advanced_exercise4.TextBook textBook1 = new TextBook("Java", "Cybersoft", "123456", "IT");
 
         System.out.println("User: ");
         User user = new User("anv1", "Nguyen Van A");
         user.borrow(referenceBook1);
         user.borrow(textBook1);
+        user.display_info();
+
+        user.return_book(referenceBook1);
+        System.out.println("Remain books after return: ");
         user.display_info();
     }
 }
